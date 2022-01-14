@@ -19,8 +19,79 @@ header{
 header > .header_inner, footer > .footer_inner{
   width:1200px; height:100px;
   margin:0px auto;
-  background-color:rgb(7, 202, 137);
+  background-color:#00c73c;
 }
+
+.header_inner{
+  padding:30px 0px;
+  box-sizing:border-box;
+  position:relative;
+}
+.header_inner > h1{
+  width:200px; height:40px;
+  background-color:chartreuse;
+  float:left;
+}
+.gnb{
+  width:700px;
+  height:40px;
+  float:right;
+  margin-top:30px;
+  z-index:1000;
+}
+.gnb > ul{
+}
+.gnb > ul > li{
+  float:left;
+  width:175px;
+  text-align:center;
+  position:relative;
+}
+.gnb > ul > li > a{
+  display:block;
+  padding:12px 0px;
+  transition:0.5s;
+}
+.gnb > ul > li > a:hover{
+  background-color:#737373;
+  color:#fff;
+}
+
+.gnb .sub{
+  position:absolute;
+  width:100%;
+  z-index:1000;
+  transition:0.3s;
+  opacity:0;
+  z-index:-1;
+}
+.gnb .sub > li{
+  line-height:40px;
+}
+.gnb .sub > li > a{
+  display:block;
+  line-height:40px;
+  color:#fff;
+  transition:0.3s;
+}
+
+.gnb:hover .sub{
+  opacity:1;
+  z-index:9999 !important;
+}
+.gnb .sub > li:hover > a{
+  color:#333;
+}
+.gnb:hover::after{
+  display:block;
+  content:"";
+  width:100%; height:180px;
+  position:absolute;
+  top:100px; left:0px;
+  background-color:#737373;
+  z-index:999;
+}
+
 
 main{
   width:1200px; height:500px;
